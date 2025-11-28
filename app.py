@@ -277,6 +277,13 @@ def apply_styles():
             color: #94a3b8;
             font-style: italic;
         }
+        .dataframe td, .dataframe th {
+        color: #000 !important;
+        }
+    
+       .cmp-table td, .cmp-table th {
+            color: #000 !important;
+        }
         </style>
     """, unsafe_allow_html=True)
 
@@ -780,3 +787,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
