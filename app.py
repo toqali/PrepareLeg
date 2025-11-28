@@ -36,20 +36,20 @@ def load_csv_data(kind: str):
     
     PATHS = {
         'نظام': {
-            'qis': r'extData\Bylaws\Qis_ByLaws_V2.xlsx',
-            'diwan': r'extData\Bylaws\Diwan_ByLaws_V2.xlsx'
+            'qis': r'extData/Bylaws/Qis_ByLaws_V2.xlsx',
+            'diwan': r'extData/Bylaws/Diwan_ByLaws_V2.xlsx'
         },
         'قانون': {
-            'qis': r'extData\Laws\Qis_Laws_V2.xlsx',
-            'diwan': r'extData\Laws\Diwan_Laws_V2.xlsx'
+            'qis': r'extData/Laws/Qis_Laws_V2.xlsx',
+            'diwan': r'extData/Laws/Diwan_Laws_V2.xlsx'
         },
         'تعليمات': {
-            'qis': r'extData\Instructions\Qis_Instructions.xlsx',
-            'diwan': r'extData\Instructions\Diwan_Instructions.xlsx'
+            'qis': r'extData/Instructions/Qis_Instructions.xlsx',
+            'diwan': r'extData/Instructions/Diwan_Instructions.xlsx'
         },
         'اتفاقيات': { 
-            'qis': r'extData\Agreements\Qis_Agreements.xlsx',
-            'diwan': r'extData\Agreements\Diwan_Agreements.xlsx'
+            'qis': r'extData/Agreements/Qis_Agreements.xlsx',
+            'diwan': r'extData/Agreements/Diwan_Agreements.xlsx'
         }
     }
 
@@ -778,4 +778,5 @@ def main():
 
 # ==================== تشغيل البرنامج ====================
 if __name__ == "__main__":
+
     main()
