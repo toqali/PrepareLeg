@@ -177,6 +177,10 @@ def apply_styles():
         .main > div > div > div > div, .main h1, .main h2, .main h3:not(.comparison-card h3) {color: white !important;}
         .css-1d391kg, [data-testid="stSidebar"] {background: rgba(255, 255, 255, 0.1) !important;}
         [data-testid="stSidebar"] * {color: white !important;}
+        [data-testid="stSidebar"][aria-expanded="false"] * {
+        display: none !important;
+        }
+
         .title-container {background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; margin-bottom: 2rem;}
         .comparison-card {background: rgba(255, 255, 255, 0.95); padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 1rem 0;}
         .comparison-card * {color: #2d3748 !important;}
@@ -788,6 +792,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
