@@ -16,6 +16,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+apply_responsive_css()
 
 st.sidebar.title("نوع التشريع")
 option = st.sidebar.radio(
@@ -164,6 +165,62 @@ def move_to_next_record(total_records: int, current_index: int) -> None:
     else:
         st.balloons()
         st.success(f"تم الانتهاء من جميع السجلات!")
+def apply_responsive_css():
+    import streamlit as st
+    st.markdown("""
+    <style>
+
+    /* منع ظهور سكرول أفقي */
+    html, body, [class*="css"] {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* تصغير الهوامش عند الشاشات الصغيرة */
+    @media (max-width: 640px) {
+        .block-container {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+        }
+    }
+
+    /* تكبير الخط على الموبايل قليلاً */
+    @media (max-width: 640px) {
+        body {
+            font-size: 15px !important;
+        }
+        h1, h2, h3 {
+            font-size: 20px !important;
+            text-align: center !important;
+        }
+    }
+
+    /* الكاردات الخاصة بك */
+    .law-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+    }
+
+    /* الكاردات على الموبايل */
+    @media (max-width: 640px) {
+        .law-card {
+            padding: 14px !important;
+            width: 100% !important;
+        }
+    }
+
+    /* الجداول — اجبارها على السحب يمين/يسار فقط داخلها */
+    table {
+        display: block;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
 
 def apply_styles():
     st.markdown("""
@@ -787,4 +844,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
